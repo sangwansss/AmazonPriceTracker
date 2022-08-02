@@ -1,0 +1,42 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <img class="loginimage" src="https://play-lh.googleusercontent.com/WM_vcLlp6vCLoc8O6W7KCKClI_PnKIZFlhnfkUoB7NSTEBrHbT_ZLww86M__DtZ2hMA" alt="amazontracker">
+    <h1 class="display-3 secretsheading">Here are your Amazon links:</h1>
+    
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Delete</th>
+          <th scope="col">S.No</th>
+          <th scope="col">Link</th>
+          <th scope="col">Price</th>
+          <th scope="col">Availability</th>
+        </tr>
+      </thead>
+      <tbody>
+          <%for(var i=0;i<amazonLinks.links.length;i++){%>
+          <tr>
+            <td>
+              <form action="/delete" method="post">
+                <input type="checkbox" name="id" value="<%=amazonLinks._id%>" onChange="this.form.submit()">
+                <input type="hidden" name="linkno" value="<%=i%>">
+              </form>
+            </td>
+            <td><%=i+1%></td>
+            <td><a href="<%=amazonLinks.links[i].link%>"><%=amazonLinks.links[i].link%></a></td>
+            <td><%=amazonLinks.links[i].price%></td>
+            <td><%=amazonLinks.links[i].availability%></td>
+          </tr>
+          <%}%>
+      </tbody>
+    </table>
+    <p class="secret-text"></p>
+    <hr>
+    <a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+    <a class="btn btn-primary btn-lg" href="/submit" role="button">Submit Link</a>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

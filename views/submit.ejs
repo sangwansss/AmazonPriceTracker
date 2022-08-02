@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="jumbotron centered">
+    <img class="loginimage" src="https://play-lh.googleusercontent.com/WM_vcLlp6vCLoc8O6W7KCKClI_PnKIZFlhnfkUoB7NSTEBrHbT_ZLww86M__DtZ2hMA" alt="amazontracker">
+    <h1 class="display-3 secretsheading">Add new link</h1>
+    <p class="secret-text1">Let us help in saving your money!</p>
+
+    <form action="/submit" method="POST">
+
+      <div class="form-group">
+        <textarea class="form-control text-center" name="link" placeholder="Enter Amazon link:"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+  </div>
+</div>
+<%- include('partials/footer') %>

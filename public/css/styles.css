@@ -1,0 +1,42 @@
+
+body {
+  background-color: #E8ECEF;
+}
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.secret-text {
+  text-align: left;
+  font-size: 1.5rem;
+  color: #black;
+}
+
+.secret-text1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #black;
+}
+
+.loginimage{
+  width:20%;
+}
+
+.display-3{
+  font-weight: bold;
+}
+
+.lead{
+  font-weight: 500;
+}
+
+.registerlogin{
+  color: #007bff;
+  font-weight: 900;
+}
+
+.secretsheading{
+  font-size: 2.5rem;
+}
